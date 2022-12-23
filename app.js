@@ -1,8 +1,9 @@
 const slides = document.querySelectorAll('.slide');
-for(let slide of slides){
+for(const slide of slides){
     slide.addEventListener('click', () => {
+        clearActiveClasses()
         slide.classList.add('active');
-        setTimeout(() => {clearActiveClasses()}, 2000);
+        
     });
 }
 function clearActiveClasses(){
